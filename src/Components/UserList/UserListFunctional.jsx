@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import UserCard from "../UserCard/UserCard";
 import { UserListWrapper, Title, Grid } from "./UserList.styles";
 
@@ -19,7 +19,7 @@ const UserListFunctional = () => {
 		}
 	};
 
-	useState(() => {
+	useEffect(() => {
 		fetchUsers();
 	}, []);
 
